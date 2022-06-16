@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+#wrapper {
+    width: 22em;
+    margin: 1em auto;
+    padding: 1em 1em 3em 1em;
+    font-size: 1.2em;
+    border-radius: .5em;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05),
+    0 0.1em .4em rgba(0, 0, 0, 0.1),
+    0 .4em .5em rgba(0, 0, 0, 0.1),
+    0 .5em 1em rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.5em .5em .6em;
+    background-color: #ededed;
+    border-radius: .3em;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+#inputControl {
+    width: 100%;
+    font-size: 1.1em;
+    background-color: #fff;
+    border: solid 2px #dfdddf;
+    border-radius: .3em;
+    padding: .3em;
+    margin-bottom: .4em;;
+}
+
+#inputControl::placeholder {
+    font-size: 1em;
+    color: #aeacae;
+}
+
+.controls__checkbox {
+    font-size: .9em;
+    color: #8f8b8b;
+    cursor: pointer;
+}
+
+.controls__checkbox > input {
+    margin-right: .4em;
+    cursor: pointer;
+}
+
+#btnAddTag {
+    padding: .3em .5em;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: .3em;
+    cursor: pointer;
+}
+
+.tags__area-header {
+    width: 100%;
+    margin: .8em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+    color: #6c746c;
+}
+
+.readonly {
+    width: 6%;
+    padding: 0 .2em;
+}
+
+input.readonly {
+    cursor: pointer;
+    align-content: baseline;
+}
+
+.readonly svg {
+    display: block;
+    width: .8em;
+    margin: 0 auto;
+    fill: #6c746c;
+}
+
+.tag__title {
+    width: 90%;
+    margin: 0;
+    text-align: center;
+}
+
+.tag {
+    display: flex;
+    align-items: baseline;
+}
+
+#btnDeleteTag {
+    display: block;
+    align-self: center;
+    width: .8em;
+    height: .8em;
+    position: relative;
+    margin-left: 0.5em;
+    padding: 0;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#btnDeleteTag::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 80%;
+    width: 2px;
+    background-color: #fff;
+    transform: translate(-50%, -50%) rotate(45deg);
+    z-index: 1;
+}
+
+#btnDeleteTag::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 80%;
+    width: 2px;
+    background-color: #fff;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: 1;
+}
+
+.tag__text {
+    margin: 0;
+    padding: 0;
+    max-width: 80%;
+    font-size: 1.3em;
+    color: #673ab7;
+    overflow: hidden;
+}
